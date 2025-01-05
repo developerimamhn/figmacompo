@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, {useState} from 'react';
 import Image from 'next/image';
 import image1 from './image/image (1).png';
 import image2 from './image/image (2).png';
@@ -10,7 +10,8 @@ import image5 from './image/image (5).png';
 import image6 from './image/image (6).png';
 import image7 from './image/image (7).png';
 import image8 from './image/image (8).png';
-   
+import image9 from './image/image9.png';
+import image10 from './image/image10.png';
 
 const Page2 = () => {
     const data = [
@@ -54,23 +55,75 @@ const Page2 = () => {
             title: 'Support',
             date: '24 July Updated',
         },
+        {
+            img: image1,
+            title: 'Signup',
+            date: '24 July Updated',
+        },
+        {
+            img: image2,
+            title: 'Deposit',
+            date: '24 July Updated',
+        },
+        {
+            img: image3,
+            title: 'Confirmations',
+            date: '24 July Updated',
+        },
+        {
+            img: image4,
+            title: 'Withdrawals',
+            date: '24 July Updated',
+        },
+        {
+            img: image5,
+            title: 'Settings',
+            date: '24 July Updated',
+        },
+        {
+            img: image6,
+            title: 'Reports',
+            date: '24 July Updated',
+        },
+        {
+            img: image7,
+            title: 'Analytics',
+            date: '24 July Updated',
+        },
+        {
+            img: image8,
+            title: 'Support',
+            date: '24 July Updated',
+        },
     ];
+    const [imageSrc, setImageSrc] = useState(image9);
+
+    const handleImageChange = () => {
+      setImageSrc(image10);
+  
+      setTimeout(() => {
+        setImageSrc(image9);
+      }, 700);
+    };
 
     return (
         <div>
-            <div className="container mx-auto mb-[90px]">
-                <div className="grid grid-cols-4 gap-x-[30px] gap-y-[15px]">
+            <div className="container mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-x-[30px] gap-y-[15px]">
                     {data.map((item, index) => (
                         <div className="figmavlue group border-[1px] border-[#F3F4F1]" key={index}>
                             <div className="valueimage w-full">
                                 <Image className="w-full" src={item.img} alt={item.title} />
                             </div>
-                            <div className="flex justify-between items-center w-full py-[16px] xl:py-[20px]">
+                            <div className="flex justify-between items-center w-full pb-[8px] xl:pb-[10px] relative">
                                 <div className="flex flex-col">
                                     <h4 className="Signup">{item.title}</h4>
                                     <p className="date mt-[6px]">{item.date}</p>
                                 </div>
-                                <div className="searchitems !bg-[#F5F5F5] group-hover:!bg-[#C6EA60] duration-300">
+                                <div className="searchitems group !bg-[#F5F5F5] group-hover:!bg-[#C6EA60] duration-300 cursor-pointer " onClick={handleImageChange}>
+                                    <p className='absolute top-[-35px] right-[0px] copybutton' >
+                                    <Image src={imageSrc} alt="Image" />
+                                    </p>
                                     <svg
                                         className="group-hover:stroke-[#000] stroke-[#7C808E]"
                                         xmlns="http://www.w3.org/2000/svg"

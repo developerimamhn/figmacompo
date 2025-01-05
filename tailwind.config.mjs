@@ -7,6 +7,9 @@ export default {
   ],
   theme: {
     extend: {
+      images: {
+        domains: ['i.imgur.com'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
