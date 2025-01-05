@@ -12,6 +12,8 @@ import image7 from './image/image (7).png';
 import image8 from './image/image (8).png';
 import image9 from './image/image9.png';
 import image10 from './image/image10.png';
+// import CopyFigmaComponentButton from './copyFigmaToClipboard';
+
 
 const Page2 = () => {
     const data = [
@@ -97,35 +99,36 @@ const Page2 = () => {
         },
     ];
     const [imageSrc, setImageSrc] = useState(image9);
+    // const [copied, setCopied] = useState(false);
 
     const handleImageChange = () => {
-      setImageSrc(image10);
-  
-      setTimeout(() => {
-        setImageSrc(image9);
-      }, 700);
+        setImageSrc(image10);
+        setTimeout(() => {
+            setImageSrc(image9);
+        }, 700);
     };
 
+    
     return (
         <div>
-            <div className="container mx-auto">
+            <div className="container mx-auto px-[24px] sm:px-0 lg:px-[50px]">
                 <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-x-[30px] gap-y-[15px]">
                     {data.map((item, index) => (
                         <div className="figmavlue group border-[1px] border-[#F3F4F1]" key={index}>
                             <div className="valueimage w-full">
                                 <Image className="w-full" src={item.img} alt={item.title} />
                             </div>
-                            <div className="flex justify-between items-center w-full pb-[8px] xl:pb-[10px] relative">
+                            <div className="flex justify-between items-center w-full  relative">
                                 <div className="flex flex-col">
-                                    <h4 className="Signup">{item.title}</h4>
-                                    <p className="date mt-[6px]">{item.date}</p>
+                                    <h4 className="Signup m-0 p-0">{item.title}</h4>
+                                    <p className="date mt-[6px] mb-0 p-0">{item.date}</p>
                                 </div>
-                                <div className="searchitems group !bg-[#F5F5F5] group-hover:!bg-[#C6EA60] duration-300 cursor-pointer " onClick={handleImageChange}>
-                                    <p className='absolute top-[-35px] right-[0px] copybutton' >
+                                <button className="searchitems group !bg-[#F5F5F5] group-hover:!bg-[#C6EA60] duration-300 cursor-pointer " onClick={handleImageChange}>
+                                    <p className='absolute top-[-32px] right-[0px] copybutton m-0 p-0' >
                                     <Image src={imageSrc} alt="Image" />
                                     </p>
                                     <svg
-                                        className="group-hover:stroke-[#000] stroke-[#7C808E]"
+                                        className="group-hover:stroke-[#000] stroke-[#7C808E] w-[16px] lg:w-[18px] xl:w-[20px] 2xl:w-[22px]"
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="26"
                                         height="26"
@@ -145,7 +148,8 @@ const Page2 = () => {
                                             strokeLinejoin="round"
                                         />
                                     </svg>
-                                </div>
+                                </button>
+                                {/* <CopyFigmaComponentButton/> */}
                             </div>
                         </div>
                     ))}
@@ -154,5 +158,6 @@ const Page2 = () => {
         </div>
     );
 };
+
 
 export default Page2;

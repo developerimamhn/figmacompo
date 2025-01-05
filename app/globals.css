@@ -14,10 +14,10 @@
 
 @Layer base{
   .searchitems{
-    @apply w-[35px] lg:w-[40px] xl:w-[45px] 2xl:w-[50px] h-[35px] lg:h-[40px] xl:h-[45px] 2xl:h-[50px] flex justify-center items-center bg-[#C6EA60] rounded-[47px]  
+    @apply w-[25px] lg:w-[30px] xl:w-[35px] 2xl:w-[40px] h-[25px] lg:h-[30px] xl:h-[35px] 2xl:h-[40px] flex justify-center items-center bg-[#C6EA60] rounded-[47px]  
   }
   .searchAreass{
-    @apply rounded-[70px] flex items-center w-[773px] py-[3px] sm:py-[4px] lg:py-[4px] pl-[12px] sm:pl-[15px] lg:pl-[20px] pr-[4px] sm:pr-[5px] lg:pr-[6px]  gap-[6px] lg:gap-[10px] justify-between 
+    @apply rounded-[70px] flex items-center lg:w-[500px] xl:w-[600px] 2xl:w-[773px] py-[3px] sm:py-[4px] lg:py-[4px] pl-[12px] sm:pl-[15px] lg:pl-[20px] pr-[4px] sm:pr-[5px] lg:pr-[6px]  gap-[6px] lg:gap-[10px] justify-between 
   }
 }
 
@@ -107,6 +107,10 @@
     opacity: 1;
     transition: opacity 0.3s ease, visibility 0s linear 0s;
   }
+  /* .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  } */
   
 
 }

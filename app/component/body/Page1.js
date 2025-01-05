@@ -7,7 +7,7 @@ const Page1 = () => {
 
     return (
         <div className='border-t-[1px] border-[#DEE0D9] w-full'>
-            <div className='container mx-auto'>
+            <div className='container mx-auto px-[24px] sm:px-0 lg:px-[50px]'>
                 <div className='flex items-center justify-start gap-[10px] my-[22px ] md:my-[30px] xl:my-[44px] flex-wrap'>
                     {buttonValues.map((value, index) => (
                         <button

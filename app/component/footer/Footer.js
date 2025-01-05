@@ -9,8 +9,8 @@ import image1 from './Screenshot 2024-07-03 at 6.45.28 PM 1.png'
 
 const Footer = () => {
     return (
-        <div className='border-[1px] border-[#DEE0D9]'>
-            <div className="container mx-auto py-[23px] sm:py-[28px] lg:py-[35px]">
+        <div className='border-[1px] border-[#DEE0D9] '>
+            <div className="container mx-auto py-[23px] sm:py-[28px] lg:py-[35px] px-[24px] sm:px-0 lg:px-[50px]">
                 <div className='flex justify-between items-center'>
                     <div>
                     <svg width="113" height="32" viewBox="0 0 113 32" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -14,7 +14,6 @@ const NavBar = () => {
     const menuButtonRef = useRef(null);
 
     const handleClickOutside = (event) => {
-        // Close menu if clicked outside of menu and toggle button
         if (
             menuRef.current &&
             !menuRef.current.contains(event.target) &&
@@ -25,7 +24,6 @@ const NavBar = () => {
     };
 
     useEffect(() => {
-        // Add event listener for clicks outside the component
         document.addEventListener("mousedown", handleClickOutside);
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
@@ -33,7 +31,7 @@ const NavBar = () => {
     }, []);
     return (
         <div className='relative z-30 w-full'>
-            <header className=' container mx-auto flex justify-between items-center py-[14px] sm:py-[18px] lg:py-[24px] relative px-[24px] sm:px-[0]'>
+            <header className=' container mx-auto flex justify-between items-center py-[14px] sm:py-[18px] lg:py-[24px] relative px-[24px] sm:px-0 lg:px-[50px]'>
                 <div className='lg:hidden relative top-[-11px]'> 
                     
                     <div 
