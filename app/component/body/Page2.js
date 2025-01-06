@@ -12,7 +12,7 @@ import image7 from './image/image (7).png';
 import image8 from './image/image (8).png';
 import image9 from './image/image9.png';
 import image10 from './image/image10.png';
-// import CopyFigmaComponentButton from './copyFigmaToClipboard';
+// import CopyFigmaComponentButton from '../clipbutton/copyFigmaToClipboard';
 
 
 const Page2 = () => {
@@ -111,7 +111,7 @@ const Page2 = () => {
     
     return (
         <div>
-            <div className="container mx-auto px-[24px] sm:px-0 lg:px-[50px]">
+            <div className="mx-auto px-[24px] sm:px-[50px]">
                 <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-x-[30px] gap-y-[15px]">
                     {data.map((item, index) => (
                         <div className="figmavlue group border-[1px] border-[#F3F4F1]" key={index}>
